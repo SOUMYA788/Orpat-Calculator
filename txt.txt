@@ -1,0 +1,2 @@
+1. Trade Mark  = <span>&#174;</span>
+2. Copy Right =  <span>&#169;</span>

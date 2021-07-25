@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    /* border: 3px solid red; */
+    position: relative;
+}
+
+#calculatorPack {
+    position: absolute;
+    height: 90vh;
+    min-width: 65%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    background-image: linear-gradient(to bottom, #565656, #4a4a4a, #313030, #060606, #000000);
+}
+
+#partOne {
+    position: absolute;
+    height: 25vh;
+    width: 90%;
+    background-color: black;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 1%;
+    border-bottom: 2px solid white;
+}
+
+#calTop {
+    position: absolute;
+    width: 90%;
+    height: 17vh;
+    background: #f7f7f7;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 12px;
+}
+
+#tradeMark {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+#logo {
+    position: absolute;
+    right: 2%;
+    top: 15%;
+    font-size: 1.5vw;
+}
+
+#screen {
+    position: absolute;
+    height: 15vh;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 45%;
+    text-align: center;
+    font-size: 6vw;
+    color: black;
+    background-color: black;
+}
+
+
+/* background-color: #c6f1c6; */
+
+#p1 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+    font-size: 1.5vw;
+}
+
+#p2 {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    right: 3%;
+    font-size: 1.5vw;
+}
+
+#p3 {
+    position: absolute;
+    color: white;
+    left: 4%;
+    top: 3%;
+    font-size: 1.5vw;
+}
+
+#partTwo {
+    position: absolute;
+    top: 30%;
+    border-bottom: 1px solid white;
+    width: 90%;
+    height: 10vh;
+    transform: translate(-50%, 0);
+    left: 50%;
+    line-height: 10vh;
+    line-break: auto;
+}
+
+.button {
+    position: absolute;
+    height: 6vh;
+    width: 11vw;
+    transform: translate(0, -50%);
+    background: #66adf5;
+    top: 50%;
+    font-size: 1.5vw;
+    outline: none;
+}
+
+.spanBtnLogo {
+    color: white;
+    font-size: 2vw;
+}
+
+#checkLeft {
+    left: 3%;
+}
+
+#checkRight {
+    left: 24%;
+}
+
+#correct {
+    left: 45%;
+}
+
+#autoReplay {
+    left: 66%;
+}
+
+#partThree {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    top: 42%;
+    height: 50vh;
+    width: 90%;
+    border: 1px solid black;
+    background: black;
+    display: flex;
+}
+
+table#listBtn-2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.zeroToNine {
+    height: 9vh;
+    width: 5vw;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 9vh;
+    margin: 1px;
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+#btnSet3nd4 {
+    position: absolute;
+    right: 2%;
+    border: 1px solid white;
+    width: 35%;
+    height: 90%;
+    transform: translate(0%, -50%);
+    top: 50%;
+}
+
+.common345 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#btnSetOne {
+    position: absolute;
+    border: 1px solid white;
+    background: black;
+    display: flex;
+    width: 20%;
+    height: 90%;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 2%;
+}
+
+#btnSetTwo {
+    position: absolute;
+    border: 1px solid white;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 25%;
+    height: 90%;
+    width: 35%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+#btnSetThree {
+    height: 20%;
+    top: 0;
+}
+
+#btnSetFour {
+    height: 20%;
+    top: 20%;
+}
+
+#btnSetFive {
+    height: 20%;
+    top: 40%;
+}
+
+#btnSetSix {
+    height: 40%;
+    bottom: 0;
+}
+
+#listBtn-3,
+#listBtn-4,
+#listBtn-5,
+#listBtn-6 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+}
+
+#btnSetOne ul,
+#btnSetThree ul,
+#btnSetFour ul,
+#btnSetFive ul,
+#btnSetSix ul {
+    list-style: none;
+}
+
+#btnSetThree ul li,
+#btnSetFour ul li {
+    float: left;
+}
+
+#btnSetOne ul li {
+    padding: 2%;
+}
+
+#btnSetThree ul li button,
+#btnSetFour ul li button,
+#btnSetFive ul li button,
+#btnSetSix ul li button {
+    font-size: 2vw;
+    width: 6vw;
+    margin: 1px;
+    height: 8vh;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 6vh;
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+#btnSetThree ul li button#on {
+    background-color: #2ca82c;
+}
+
+#btnSetOne ul li button {
+    height: 8vh;
+    width: 10vw;
+    margin: 0;
+    text-align: center;
+    font-size: 4vw;
+    line-height: 8vh;
+}
+
+#btnSetSix ul li button {
+    font-size: 8vw;
+    width: 9vw;
+    margin: 1px;
+    height: 15vh;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 15vh;
+}
+
+#off {
+    position: absolute;
+    right: 0%;
+    width: 10%;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Calculator</title>
+    <link rel="stylesheet" href="Thems/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="calculatorPack">
+
+            <div id="partOne">
+                <div id="calTop">
+                    <span id="tradeMark">&#174;</span>
+                    <h1 id="logo">SOUMYA</h1>
+                    <input type="text" id="screen" disabled>
+                </div>
+                <p1 id="p1">LARGE DISPLAY</p1>
+                <p2 id="p2">10 YEARS BATTERY LIFE</p2>
+                <p3 id="p3">DESIGINED AND DEVELOPED BY SOUMYA</p3>
+            </div>
+
+
+
+
+            <div id="partTwo">
+                <button id="checkLeft" class="button" disabled><span class="spanBtnLogo" >&#8647;</span> CHECK </button>
+                <button id="checkRight" class="button" disabled>CHECK <span class="spanBtnLogo" >&#8649;</span></button>
+                <button id="correct" class="button" disabled>CORRECT</button>
+                <button id="autoReplay" class="button" disabled>AUTO REPLAY</button>
+                <button id="off" class="button" onclick="document.getElementById('screen').style.background = 'black'">
+                    OFF
+                </button>
+
+            </div>
+
+
+            <div id="partThree">
+                <div id="btnSetOne">
+                    <ul id="listBtn-1">
+                        <li><button disabled><span>&#9654;</span></button></li>
+                        <li><button id="grandTotal" disabled>GT</button></li>
+                        <li><button id="MU" disabled> MU </button></li>
+                        <li><button id="+/-"> +/-</button></li>
+                        <li><button id="CE" disabled> CE</button></li>
+                    </ul>
+                </div>
+                <div id="btnSetTwo">
+                    <table id="listBtn-2">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button id="7" class="zeroToNine">7</button>
+                                    <button id="8" class="zeroToNine">8</button>
+                                    <button id="9" class="zeroToNine">9</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="4" class="zeroToNine">4</button>
+                                    <button id="5" class="zeroToNine">5</button>
+                                    <button id="6" class="zeroToNine">6</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="1" class="zeroToNine">1</button>
+                                    <button id="2" class="zeroToNine">2</button>
+                                    <button id="3" class="zeroToNine">3</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <button id="0" class="zeroToNine">0</button>
+                                    <button id="00" class="zeroToNine">00</button>
+                                    <button id="." class="zeroToNine">.</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="btnSet3nd4">
+                    <div class="common345" id="btnSetThree">
+                        <ul id="listBtn-3">
+                            <li><button id="devide"><h2>⨸</h2></button></li>
+                            <li><button id="sqRt"> <p> <span>&#8730;</span> </p></button></li>
+                            <li><button id="on" type="button" onclick="document.getElementById('screen').style.background = ' #c6f1c6'"> <p1>ON</p1>  </button></li>
+                        </ul>
+                    </div>
+
+                    <div class="common345" id="btnSetFour">
+                        <ul id="listBtn-4">
+                            <li><button id="multiply"><p></p>X</p></button></li>
+                            <li><button id="persentage"> <p> % </p></button></li>
+                            <li><button id="mrc" disabled> <p> MRC</p></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="common345" id="btnSetFive">
+                        <ul id="listBtn-5">
+                            <li><button class="operators" id="minus"> <p> -</p></button></li>
+                            <li><button class="operators" id="m-" disabled> <p> M-</p></button></li>
+                            <li><button class="operators" id="m+" disabled> <p> m+ </p> </button></li>
+                        </ul>
+                    </div>
+
+                    <div class="common345" id="btnSetSix">
+                        <ul id="listBtn-6">
+                            <li><button class="operators" id="plus"> <p> +</p></button></li>
+                            <li><button class="operators" id="equalsTo"> <p> =</p></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script/calculator.js"></script>
+
+</html>
