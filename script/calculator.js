@@ -1,5 +1,7 @@
 const screen = document.querySelector('#screen');
+let operateValue='';
 let screenValue = '';
+
 const buttons = document.querySelectorAll("button")
 for (items of buttons) {
     // for of start
@@ -7,28 +9,32 @@ for (items of buttons) {
     items.addEventListener('click', (e) => {
 
         let buttonText = e.target.innerText;
+        let changeBtnTxt = '';
         console.log('just press on', buttonText);
 
 
         if (buttonText == 'X') {
 
-            buttonText = '*';
+            changeBtnTxt = '*';
+            operateValue += changeBtnTxt;
             screenValue += buttonText;
             screen.value = screenValue;
 
-        } else if (buttonText == '⨸') {
+        } else if (buttonText == '÷') {
 
-            buttonText = '/';
+            changeBtnTxt = '/';
+            operateValue += changeBtnTxt;
             screenValue += buttonText;
             screen.value = screenValue;
 
         } else if (buttonText == '=') {
 
-            screen.value = eval(screen.value)
+            screen.value = eval(operateValue)
 
         } else if (buttonText == '%') {
 
-            buttonText = '/100';
+            changeBtnTxt = '/100';
+            operateValue += changeBtnTxt;
             screenValue += buttonText;
             screen.value = screenValue;
 
@@ -44,18 +50,20 @@ for (items of buttons) {
 
         } else if (buttonText == 'ON') {
 
-            screen.value = ""
             screenValue = "";
+            operateValue = "";
             screen.value = screenValue;
 
 
         } else if (buttonText == 'OFF') {
 
-            screenValue += "";
+            screenValue = "";
+            operateValue = "";
             screen.value = screenvalue;
 
         } else {
 
+            operateValue += buttonText;
             screenValue += buttonText;
             screen.value = screenValue;
 
