@@ -1,310 +1,483 @@
+@font-face {
+    font-family: economia;
+    src: url(/font/Economica/Economica-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(/font/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(/font/Quicksand/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: teko;
+    src: url(/font/Teko/Teko-Regular.ttf);
+}
+
+@font-face {
+    font-family: zillaSlab;
+    src: url(/font/Zilla_Slab/ZillaSlab-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: calc(0.2+1vw);
+}
+
 #container {
     height: 100vh;
     width: 100%;
+    display: flex;
     /* border: 3px solid red; */
-    position: relative;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #calculatorPack {
-    position: absolute;
-    height: 90vh;
-    min-width: 65%;
-    transform: translate(-50%, 0);
-    left: 50%;
+    height: 95vh;
+    width: 50vw;
     background-image: linear-gradient(to bottom, #565656, #4a4a4a, #313030, #060606, #000000);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #partOne {
-    position: absolute;
     height: 25vh;
     width: 90%;
-    background-color: black;
-    transform: translate(-50%, 0);
-    left: 50%;
-    top: 1%;
+    margin-top: 5%;
     border-bottom: 2px solid white;
 }
 
+#logoDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background: red; */
+    align-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+#logoDiv p,
+#logoDiv span {
+    color: white;
+    font-family: poppins;
+}
+
+#logoDiv p {
+    font-size: 1rem;
+}
+
+#logoDiv span {
+    font-size: 1.5rem;
+}
+
 #calTop {
-    position: absolute;
     width: 90%;
     height: 17vh;
-    background: #f7f7f7;
-    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     border-radius: 12px;
 }
 
 #tradeMark {
-    position: absolute;
     right: 2%;
     top: 2%;
 }
 
+
 #logo {
-    position: absolute;
     right: 2%;
     top: 15%;
     font-size: 1.5vw;
 }
 
-#screen {
-    position: absolute;
-    height: 15vh;
-    width: 75%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 45%;
+#screenDiv {
+    height: 80%;
+    width: 100%;
+    margin-top: 2%;
+    padding: 1%;
     text-align: center;
-    font-size: 6vw;
+    background: black;
     color: black;
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#screenDiv p {
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: quicksand, serif;
+}
+
+#totalValue {
+    height: 60%;
+    outline: none;
+    border: none;
+}
+
+#calculation {
+    height: 40%;
 }
 
 
-/* background-color: #c6f1c6; */
 
-#p1 {
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 9%;
-    font-size: 1.5vw;
-}
-
-#p2 {
-    position: absolute;
-    color: white;
-    bottom: 0;
-    right: 3%;
-    font-size: 1.5vw;
-}
-
-#p3 {
-    position: absolute;
-    color: white;
-    left: 4%;
-    top: 3%;
-    font-size: 1.5vw;
-}
+/* PART TWO */
 
 #partTwo {
-    position: absolute;
-    top: 30%;
     border-bottom: 1px solid white;
     width: 90%;
     height: 10vh;
-    transform: translate(-50%, 0);
-    left: 50%;
-    line-height: 10vh;
-    line-break: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button {
-    position: absolute;
-    height: 6vh;
-    width: 11vw;
-    transform: translate(0, -50%);
+    height: 60%;
+    width: 15%;
     background: #66adf5;
+    color: black;
     top: 50%;
-    font-size: 1.5vw;
+    font-size: 0.7rem;
     outline: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#off,
+#on {
+    width: 10%;
+}
+
+#off{
+    background-color: red;
+}
+
+#on{
+    background-color: green;
 }
 
 .spanBtnLogo {
-    color: white;
-    font-size: 2vw;
+    color: black;
+    font-size: 1vw;
 }
 
-#checkLeft {
-    left: 3%;
-}
 
-#checkRight {
-    left: 24%;
-}
 
-#correct {
-    left: 45%;
-}
-
-#autoReplay {
-    left: 66%;
-}
-
+/* PART THREE */
 #partThree {
-    position: absolute;
-    transform: translate(-50%, 0%);
-    left: 50%;
-    top: 42%;
     height: 50vh;
     width: 90%;
     border: 1px solid black;
     background: black;
     display: flex;
-}
-
-table#listBtn-2 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
-
-.zeroToNine {
-    height: 9vh;
-    width: 5vw;
-    font-size: 4vw;
-    text-align: center;
-    line-height: 9vh;
-    margin: 1px;
-    background-color: black;
-    color: white;
-    outline: none;
-}
-
-#btnSet3nd4 {
-    position: absolute;
-    right: 2%;
-    border: 1px solid white;
-    width: 35%;
-    height: 90%;
-    transform: translate(0%, -50%);
-    top: 50%;
-}
-
-.common345 {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    align-content: center;
+    font-family: 'quicksand';
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    display: flex;
+    align-content: center;
 }
 
 #btnSetOne {
-    position: absolute;
-    border: 1px solid white;
-    background: black;
-    display: flex;
+    height: 100%;
     width: 20%;
-    height: 90%;
-    transform: translate(0, -50%);
-    top: 50%;
-    left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid white;
+    align-content: center;
+    align-items: center;
+    padding: 1% 2%;
+    font-size: 2vw;
 }
+
+.btnSetOneBtns {
+    width: 7vw;
+    height: 6vh;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
 
 #btnSetTwo {
-    position: absolute;
+    width: 48%;
+    height: 100%;
+    /* padding: 1%; */
+    display: grid;
     border: 1px solid white;
-    transform: translate(0%, -50%);
-    top: 50%;
-    left: 25%;
-    height: 90%;
-    width: 35%;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(4, 15%);
+    grid-gap: 10% 2%;
     align-items: center;
-    align-content: center;
+    justify-content: center;
+    justify-items: center;
     text-align: center;
+    align-content: center;
 }
+
+.btnSetTwoBtn {
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    font-size: 1.5rem;
+}
+
 
 #btnSetThree {
-    height: 20%;
-    top: 0;
+    width: 30%;
+    height: 100%;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(2, 42%);
+    grid-template-rows: repeat(6, 13%);
+    grid-gap: 3% 6%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
 }
 
-#btnSetFour {
-    height: 20%;
-    top: 20%;
-}
-
-#btnSetFive {
-    height: 20%;
-    top: 40%;
-}
-
-#btnSetSix {
-    height: 40%;
-    bottom: 0;
-}
-
-#listBtn-3,
-#listBtn-4,
-#listBtn-5,
-#listBtn-6 {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+.btnSetThreeBtn {
+    width: 100%;
+    height: 100%;
+    color: black;
+    background: white;
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
 }
 
-#btnSetOne ul,
-#btnSetThree ul,
-#btnSetFour ul,
-#btnSetFive ul,
-#btnSetSix ul {
-    list-style: none;
+#equalBtn {    
+    
+    grid-row: 5/span 2;
+
 }
 
-#btnSetThree ul li,
-#btnSetFour ul li {
-    float: left;
+#plusSign{
+    grid-row: 5/span 2;
 }
 
-#btnSetOne ul li {
-    padding: 2%;
+
+
+
+@media screen and (max-width: 830px) {
+
+    .button{
+        font-size: 0.6rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.8rem;
+    }  
 }
 
-#btnSetThree ul li button,
-#btnSetFour ul li button,
-#btnSetFive ul li button,
-#btnSetSix ul li button {
-    font-size: 2vw;
-    width: 6vw;
-    margin: 1px;
-    height: 8vh;
-    flex-wrap: wrap;
-    text-align: center;
-    line-height: 6vh;
-    background-color: black;
-    color: white;
-    outline: none;
+@media screen and (max-width: 690px) {
+
+    .button{
+        font-size: 0.5rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.8rem;
+    }  
+}
+@media screen and (max-width: 620px) {
+
+    #calculatorPack{
+        width: 65vw;
+    }  
 }
 
-#btnSetThree ul li button#on {
-    background-color: #2ca82c;
+@media screen and (max-width: 475px) {
+
+    #calculatorPack{
+        width: 100vw;
+    }  
 }
 
-#btnSetOne ul li button {
-    height: 8vh;
-    width: 10vw;
-    margin: 0;
-    text-align: center;
-    font-size: 4vw;
-    line-height: 8vh;
+
+@media screen and (max-width: 270px) {
+
+    .button{
+        font-size: 0.4rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.7rem;
+    }  
+
+
 }
 
-#btnSetSix ul li button {
-    font-size: 8vw;
-    width: 9vw;
-    margin: 1px;
-    height: 15vh;
-    flex-wrap: wrap;
-    text-align: center;
-    line-height: 15vh;
+@media screen and (max-width: 235px) {
+
+    .button{
+        font-size: 0.4rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.6rem;
+    }  
+
+    #screenDiv p{
+        font-size: 1rem;
+    }
 }
 
-#off {
-    position: absolute;
-    right: 0%;
-    width: 10%;
+
+@media screen and (max-width: 195px) {
+
+    .button{
+        font-size: 0.3rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.5rem;
+    }  
+}
+@media screen and (max-width: 166px) {
+
+    .button{
+        font-size: 0.3rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.4rem;
+    }  
+}
+
+@media screen and (max-width: 134px) {
+
+    .button{
+        font-size: 0.2rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.3rem;
+    }  
+
+    #screenDiv p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 106px) {
+
+    .button{
+        font-size: 0.15rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.25rem;
+    }  
+
+    #screenSize p{
+        font-size: 0.2;
+    }
+}
+
+@media screen and (max-width: 90px) {
+
+    .button{
+        font-size: 0.10rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.20rem;
+    }  
+
+    #screenSize p{
+        font-size: 0.2px;
+    }
+}
+
+@media screen and (max-width: 74px) {
+
+    .button{
+        font-size: 0.09rem;
+    }
+
+    #logoDiv p,
+    .btnSetOneBtns,
+    .btnSetTwoBtn,
+    .btnSetThreeBtn{
+        font-size: 0.1rem;
+    } 
+    
+    #screenSize p{
+        font-size: 0.2px;
+    }
 }
